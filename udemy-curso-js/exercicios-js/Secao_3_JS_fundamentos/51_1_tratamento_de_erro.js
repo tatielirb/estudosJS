@@ -1,4 +1,4 @@
-//video 52
+//video 51
 function tratarErroELancar(erro){
   // throw new erro('...')
   // throw 10
