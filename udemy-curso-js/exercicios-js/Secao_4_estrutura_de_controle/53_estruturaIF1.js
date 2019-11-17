@@ -1,4 +1,4 @@
-//video 54
+//video 53
 
 function soBoaNoticia(nota) {
   if(nota >= 7) {

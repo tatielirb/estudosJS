@@ -1,4 +1,4 @@
-//video 60
+//video 59
 
 function getInteiroAletorioEntre(min, max) {
   const valor = Math.random() * (max - min)  + min

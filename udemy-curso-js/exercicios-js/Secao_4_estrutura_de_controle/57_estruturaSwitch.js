@@ -1,4 +1,4 @@
-//video 58
+//video 57
 const imprimirResultado = function (nota) {
   switch (Math.floor(nota)) {
     case 10:

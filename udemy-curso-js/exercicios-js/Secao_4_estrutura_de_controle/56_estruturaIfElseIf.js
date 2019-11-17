@@ -1,4 +1,4 @@
-//video 57
+//video 56
 
 Number.prototype.entre = function (inicio, fim) {
   return this >= inicio && this <= fim

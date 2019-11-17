@@ -1,4 +1,4 @@
-//video 56
+//video 55
 
 const imprimirResultado = function(nota) {
   if(nota >=7) {
@@ -10,4 +10,4 @@ const imprimirResultado = function(nota) {
 
 imprimirResultado(10)
 imprimirResultado(4)
-imprimirResultado('epa')
+imprimirResultado('epa') //cuidado
