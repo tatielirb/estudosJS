@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+   
+    <div v-for='imagem in imagens'>
+      <img v-bind:src="imagem" v-bind:title="titleImg" width="40px">
+    </div>
+    <br>
+    <div v-for="(fruta, index) in frutas">
+      {{index}} - {{fruta.nome}} / {{fruta.cor}}
+    </div>
+    <br>
+    <ul v-for="(value, key, index) in frutas[0]">
+      <li>{{index}} - {{key}}:{{value}}</li>
+    </ul>
+
+    <ul v-for="(value, key, index) in usuario">
+      <li>{{index}} - {{value}}</li>
+    </ul>
+    
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script> 
+    new Vue({
+      el: '#app',
+      data: {
+        imagens: ['https://miro.medium.com/max/400/1*wqYF-8Dmh7LhtLkKfERc3Q.png',
+        'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
+        'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg'],     
+        titleImg: 'logo',  
+        frutas: [
+          {nome: 'Pera', cor: 'Verde'},
+          {nome: 'Uva', cor: 'Roxa'},
+          {nome: 'maça', cor: 'vermelha'},
+        ],
+        usuario:{
+          nome: 'Tati',
+          telefone: '777788',
+          email: 'tati@tati.com',
+          sobrenome: 'ramos'
+        }            
+      }
+     
+    }) 
+  </script>
+</body>
+</html>

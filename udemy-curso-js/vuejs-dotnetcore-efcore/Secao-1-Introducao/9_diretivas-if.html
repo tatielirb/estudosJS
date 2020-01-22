@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <input type="text" v-model="textDigitado">
+    <br>
+    {{textDigitado}}
+    <br>
+    <div v-if="textDigitado == 1">
+      <img v-bind:src="srcImg" v-bind:title="titleImg" width="40px">
+    </div>
+    <div  v-if="textDigitado == 2">
+      <img v-bind:src="srcImgOne" v-bind:title="titleImg" width="40px">
+    </div>
+    <div  v-if="textDigitado == 3">
+      <img v-bind:src="srcImgTwo" v-bind:title="titleImg" width="40px">
+    </div>
+    
+    <br>
+    <a v-bind:href="url">VUE</a>
+    <p v-text="textPar"></p>
+    <p v-html="textPar"></p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script> 
+    new Vue({
+      el: '#app',
+      data: {
+        srcImg: 'https://miro.medium.com/max/400/1*wqYF-8Dmh7LhtLkKfERc3Q.png',
+        srcImgOne: 'https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg',
+        srcImgTwo: 'https://upload.wikimedia.org/wikipedia/commons/c/cf/Angular_full_color_logo.svg',
+        titleImg: 'logo',
+        url: 'https://vuejs.org/',
+        textPar:'teste qualquer',
+        textDigitado: ''
+        
+      }
+     
+    }) 
+  </script>
+</body>
+</html>
