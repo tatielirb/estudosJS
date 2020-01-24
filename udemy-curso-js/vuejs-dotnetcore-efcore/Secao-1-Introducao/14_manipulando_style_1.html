@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+    <!-- <input type="text" v-model="textDigitado" v-on:keyup.enter="alterarNome('Andrade')"> -->
+    <input type="text" v-model="textDigitado" v-on:keyup.space="alterarNome()">
+
+    <ul>
+      <li v-for="item in array" 
+       style="background: white"
+       @click="alerta($event)" >
+       {{item}}
+      </li>
+    </ul>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script> 
+    new Vue({
+      el: '#app',
+      data: {
+          textDigitado: "",
+          array: []
+      },
+      methods: {
+        alterarNome() {
+          this.array.push(this.textDigitado);
+          this.textDigitado = '';
+        },
+        alerta(event) {
+          element = event.target;
+          if(element.style.background == 'while')
+            event.target.style = "backgraund: red";
+          else
+            event.target.style = "backgraund: while";
+        }
+      },
+     
+    }) 
+  </script>
+</body>
+</html>

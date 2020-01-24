@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div id="app">
+
+    <button  @click="vermelho()">Vermelho</button>
+    <button  @click="verde()"> verde</button>
+    <button  @click="incolor()">incolor</button>
+    <br>
+    <p v-bind:class="{red: colors.vermelho, green: colors.verde, incolor: colors.incolor}">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque quisquam aspernatur dolorem vero officia deleniti quae molestias tempora incidunt velit, enim magni qui earum optio praesentium. A natus sint quibusdam.
+    </p>
+
+  </div>
+  <style>
+    .red {
+      background-color: red;
+    }
+    .green {
+      background-color: green;
+    }
+    .blue {
+      background-color: blue;
+    }
+    .yesllow {
+      background-color: yellow;
+    }
+    .incolor {
+      background-color: indigo;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script> 
+    new Vue({
+      el: '#app',
+      data: {
+        colors: {
+          vermelho: true,
+          verde: false,
+          incolor: false,
+        },
+      },
+      methods: {
+        vermelho() {
+          this.colors.vermelho = true;
+          this.colors.verde = false;
+          this.colors.incolor = false;
+        },
+        verde() {
+          this.colors.vermelho = false;
+          this.colors.verde = true;
+          this.colors.incolor = false;
+        },
+        incolor() {
+          this.colors.vermelho = false;
+          this.colors.verde = false;
+          this.colors.incolor = true;
+        }
+      },
+     
+    }) 
+  </script>
+</body>
+</html>
