@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.22/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-select@3.0.0"></script>
+  <link rel="stylesheet" href="https://unpkg.com/vue-select@3.0.0/dist/vue-select.css">
+</head>
+<body>
+  <div id="app">
+    <v-select :options="options"></v-select>
+  </div>
+  
+
+  <script> 
+  Vue.component('v-select', VueSelect.VueSelect, {
+      props: {
+        options: {
+          type: Array,
+          default() {
+            return [];
+          }
+        },
+      },
+      data () {
+        return {
+          options: [
+            'foo',
+            'bar',
+            'baz'
+          ]
+        }            
+      }  
+    });
+    if (document.getElementById("app") !== null) {
+        var vm = new Vue({
+            el: '#app'
+        });
+    }
+
+    
+
+    // Vue.component('v-select', VueSelect.VueSelect)
+
+    // new Vue({
+    //   el: '#app',
+    //   data: {
+    //     options: [
+    //       'foo',
+    //       'bar',
+    //       'baz'
+    //     ]
+    //   }
+    // })
+  </script>
+</body>
+</html>
